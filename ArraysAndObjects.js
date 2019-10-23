@@ -21,10 +21,10 @@ let AustralianDollars = Euros * rates.AUD
 let highestRate = 0
 let highestRateName = ""
 
-for (const sym in rates){
-	if (rates[sym] > highestRate){
-		highestRate = rates[sym]
-		highestRateName = sym
+for (const sym in rates){  			// loops through rates list.
+	if (rates[sym] > highestRate){	// checks if the rate is bigger then current hightest rate.
+		highestRate = rates[sym] 	// if it is sets that as the new higest rate
+		highestRateName = sym		// store symbol name 
 	}
 }
 console.log(highestRate)
@@ -66,15 +66,15 @@ var cats_and_owners = [
   { name: 'Snoop Dogg', cat : 'Miles Davis' }
 ];
 
-cats_and_owners.forEach(function(object){
+cats_and_owners.forEach(function(object){	//finds if cat is owned by Gary and if so prints cat's name
 	if(object.name === "Gary Oldman"){
 		console.log(object.cat)
 	}
 })
 
-cats_and_owners.push({name: "Taylor Swift", cat : "Meredith"})
+cats_and_owners.push({name: "Taylor Swift", cat : "Meredith"})	//adds cat
 
-cats_and_owners.forEach(function(nameCat){
+cats_and_owners.forEach(function(nameCat){						//prints all cats and owner name
 	console.log(nameCat.name + " " + nameCat.cat)
 })
 
@@ -222,10 +222,10 @@ var nobel_prize_winners_2017 = {
 // TODO write code to print the total number of prize categories
 // TODO write code to count the total number of laureates from 2017. (have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.)
 console.log("")
-let nobelPrizes = nobel_prize_winners_2017.prizes
-nobelPrizes.forEach(function(yearCatagoryLauteates){
-	yearCatagoryLauteates.laureates.forEach(function(fnameLname){
-		console.log(fnameLname.firstname + fnameLname.surname)
+let nobelPrizes = nobel_prize_winners_2017.prizes					
+nobelPrizes.forEach(function(yearCatagoryLauteates){				
+	yearCatagoryLauteates.laureates.forEach(function(fnameLname){	
+		console.log(fnameLname.firstname + fnameLname.surname)		
 	})
 })
 
