@@ -222,14 +222,14 @@ var nobel_prize_winners_2017 = {
 // TODO write code to print the total number of prize categories
 // TODO write code to count the total number of laureates from 2017. (have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.)
 console.log("")
-let nobelPrizes = nobel_prize_winners_2017.prizes					
-nobelPrizes.forEach(function(yearCatagoryLauteates){				
+let nobelPrizes = nobel_prize_winners_2017.prizes						
+nobelPrizes.forEach(function(yearCatagoryLauteates){	//cycle through all laureates, print the first names and last names of each.
 	yearCatagoryLauteates.laureates.forEach(function(fnameLname){	
 		console.log(fnameLname.firstname + fnameLname.surname)		
 	})
 })
 
-nobelPrizes.forEach(function(yearCatagoryLauteates){
+nobelPrizes.forEach(function(yearCatagoryLauteates){	//cycle through each prize, cycle through all the laureates, prints the id.
 	yearCatagoryLauteates.laureates.forEach(function(idZone){
 		console.log(idZone.id)
 	})
@@ -240,13 +240,13 @@ nobelPrizes.forEach(function(yearCatagoryLauteates){
 })
 
 let catNumber = 0
-nobelPrizes.forEach(function(yearCatagoryLauteates){
-	catNumber ++
+nobelPrizes.forEach(function(yearCatagoryLauteates){ //cycles through each prize and ups the cat number for each one.
+	catNumber ++	//CATS INTENSIFY 
 })
 console.log(catNumber)
 
 let lautNumber = 0
-nobelPrizes.forEach(function(yearCatagoryLauteates){
+nobelPrizes.forEach(function(yearCatagoryLauteates){	//cycle through each prize, cycles through each lauteate and counts them.
 	yearCatagoryLauteates.laureates.forEach(function(fnameLname){
 		lautNumber++
 	})
